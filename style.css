@@ -852,6 +852,7 @@ ul {
   border-radius: var(--radius-lg);
   padding: 1.8rem 1.5rem;
   position: relative;
+  isolation: isolate;
   overflow: hidden;
   cursor: default;
   transition: border-color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
@@ -919,12 +920,13 @@ ul {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.48s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.38s ease,
-    margin-top 0.35s ease;
+  transition: max-height 0.48s cubic-bezier(0.4, 0, 0.2, 1),opacity 0.38s ease,margin-top 0.35s ease;
   position: relative;
   z-index: 1;
   margin-top: 0;
+}
+.services-grid {
+  align-items: start; /* prevents all cards stretching */
 }
 
 .svc-card:hover .svc-expand {
