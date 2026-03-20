@@ -51,15 +51,7 @@ function injectLogos() {
     heroFloat.appendChild(img);
   }
 
-  // Footer logo
-  const footerLogo = document.getElementById("footer-logo");
-  if (footerLogo) {
-    const img = document.createElement("img");
-    img.src = LOGO_FULL;
-    img.alt = "Aayvimo Technologies";
-    img.className = "footer-logo-img";
-    footerLogo.appendChild(img);
-  }
+  // Footer logo — now added directly in HTML as SVG
 }
 
 /* ── Navbar Scroll Effect ─────────────────────────────────── */

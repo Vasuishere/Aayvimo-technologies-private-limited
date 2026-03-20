@@ -2040,7 +2040,9 @@ footer {
 }
 
 .footer-logo-img {
-  height: 36px;
+  height: 240px;
+  margin-left: -63px;
+  margin-bottom: -80px;
   width: auto;
   object-fit: contain;
   opacity: 0.85;
