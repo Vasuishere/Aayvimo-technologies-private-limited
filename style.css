@@ -51,20 +51,25 @@ body {
   color: var(--text);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  /* smooths fonts on webkit browsers */
   -moz-osx-font-smoothing: grayscale;
+  /* smooths fonts on firefox */
   line-height: 1.6;
 }
 
 ::selection {
   background: var(--orange);
+  /* changes the color of selected text on browser */
   color: #fff;
 }
 
 ::-webkit-scrollbar {
+  /* changes the width of the scrollbar */
   width: 4px;
 }
 
 ::-webkit-scrollbar-track {
+  /* changes the color of the track */
   background: var(--bg);
 }
 
@@ -76,6 +81,7 @@ body {
 img {
   max-width: 100%;
   display: block;
+  /* makes images block level */
 }
 
 a {
@@ -260,14 +266,21 @@ ul {
 /* ── NAVBAR ───────────────────────────────────────────────── */
 #navbar {
   position: fixed;
+  /* makes the navbar stay at the top of the page */
   top: 0;
+  /* sets the navbar to the top of the page */
   left: 0;
+  /* sets the navbar to the left of the page */
   right: 0;
+  /* sets the navbar to the right of the page */
   z-index: 9999;
-  height: 70px;
+  /* brings the navbar to the front of the page */
+  height: 90px;
+  /* sets the height of the navbar */
   display: flex;
+  /* makes the navbar a flex container */
   align-items: center;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
   border-bottom: 1px solid transparent;
   background: rgba(2, 6, 23, 0.6);
@@ -280,8 +293,7 @@ ul {
   -webkit-backdrop-filter: blur(24px);
   border-bottom-color: rgba(10, 102, 194, 0.18);
   box-shadow: 0 2px 40px rgba(0, 0, 0, 0.5);
-  background: rgba(2, 6, 23, 0.92);
-  backdrop-filter: blur(24px);
+
 }
 
 .nav-inner {
@@ -293,12 +305,10 @@ ul {
   justify-content: space-between;
   gap: 1rem;
 }
-.nav-logo-img {
-  height: 600px;   /* increase from 44px */
-  width: 600px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 12px rgba(10, 102, 194, 0.4));
-  transition: filter 0.3s ease;
+
+.nav-logo-full {
+  margin-right: auto;
+  gap: 0;
 }
 
 /* Logo Variants */
@@ -316,6 +326,7 @@ ul {
   .nav-logo-full {
     display: flex;
   }
+
   .nav-logo-img {
     height: 70px;
   }
@@ -326,6 +337,7 @@ ul {
   .nav-logo-md {
     display: flex;
   }
+
   .nav-logo-img {
     height: 55px;
   }
@@ -336,14 +348,16 @@ ul {
   .nav-logo-sm {
     display: flex;
   }
+
   .nav-logo-img {
     height: 45px;
   }
 }
 
 .nav-logo-img {
-  height: 44px;
+  height: 100px;
   width: auto;
+  margin-top: 15px;
   object-fit: contain;
   filter: drop-shadow(0 0 12px rgba(10, 102, 194, 0.4));
   transition: filter 0.3s ease;
@@ -357,6 +371,47 @@ ul {
 .nav-logo-md:hover .nav-logo-img,
 .nav-logo-sm:hover .nav-logo-img {
   filter: drop-shadow(0 0 18px rgba(249, 115, 22, 0.5));
+}
+
+/* Logo Text (Desktop split logo) */
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+  gap: 0;
+  margin-left: -25px;
+}
+
+.nav-logo-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.17rem;
+  background: linear-gradient(135deg, #0f66a4 0%, #50AAFA 30%, #ffa200 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-logo-tech {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.45rem;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  margin-top: 3.5px;
+  margin-left: 0.3rem;
+}
+
+.nav-logo-tagline {
+  font-family: audiowide;
+  font-size: 0.65rem;
+  font-weight: 400;
+  font-style: none;
+  letter-spacing: 0.1em;
+  color: #7cb342;
+  margin-top: 1.5px;
 }
 
 /* Nav Links */
@@ -920,13 +975,15 @@ ul {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.48s cubic-bezier(0.4, 0, 0.2, 1),opacity 0.38s ease,margin-top 0.35s ease;
+  transition: max-height 0.48s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.38s ease, margin-top 0.35s ease;
   position: relative;
   z-index: 1;
   margin-top: 0;
 }
+
 .services-grid {
-  align-items: start; /* prevents all cards stretching */
+  align-items: start;
+  /* prevents all cards stretching */
 }
 
 .svc-card:hover .svc-expand {
@@ -1522,6 +1579,13 @@ ul {
   height: 500px;
   background: radial-gradient(ellipse, rgba(10, 102, 194, 0.07), transparent 70%);
   pointer-events: none;
+}
+
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .founders-grid {
