@@ -109,7 +109,7 @@ ul {
 
 .section-eyebrow {
   font-family: var(--font-tag);
-  font-size: 0.62rem;
+  font-size: 1rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--orange);
@@ -725,7 +725,7 @@ ul {
 
 .hero-tagline {
   font-family: var(--font-tag);
-  font-size: 0.73rem;
+  font-size: 1rem;
   letter-spacing: 0.18em;
   color: var(--orange);
   display: block;
@@ -2051,7 +2051,7 @@ footer {
 
 .footer-tagline {
   font-family: var(--font-tag);
-  font-size: 0.58rem;
+  font-size: 0.65rem;
   color: var(--orange);
   letter-spacing: 0.14em;
   margin-bottom: 0.85rem;
@@ -2135,9 +2135,9 @@ footer {
 }
 
 .footer-bottom-tag {
-  font-family: var(--font-tag);
-  font-size: 0.56rem;
-  color: var(--blue);
+  font-family: audiowide;
+  font-size: 0.7rem;
+  color: var(--orange);
   letter-spacing: 0.15em;
-  opacity: 0.65;
+  opacity: 1;
 }
