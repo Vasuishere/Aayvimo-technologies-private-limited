@@ -177,8 +177,8 @@ function initContactForm() {
     Email.send({
       Host: "smtp.gmail.com",
       Username: "aayvimotechnologies@gmail.com",
-      Password: "vyjb ldiu gwyq doaz",
-      To: email, // Sends to you and a copy to the user
+      Password: "vyjbldiugwyqdoaz",
+      To: email,
       From: "aayvimotechnologies@gmail.com",
       Subject: "New Contact Form Submission from " + name,
       Body: emailBody
